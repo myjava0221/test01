@@ -29,7 +29,7 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
 	public List<ProductBean> getAllProduct() {
 		System.out.println("進入DAO: ");
 		StringBuilder qryStmt = new StringBuilder();
-		qryStmt.append(" FROM ProductBean WHERE itemStrtus='True' ");
+		qryStmt.append(" FROM ProductBean WHERE itemStatus='True' ");
 		String hql = qryStmt.toString();
 		Session session = factory.getCurrentSession();
 		List<ProductBean> productList = new LinkedList<>();
@@ -58,7 +58,7 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
 		System.out.println("進入DAO productID :" + productID);
 		List<ProductBean> getProduct = new LinkedList<>();
 		Session session = factory.getCurrentSession();
-		String hql = "FROM ProductBean AS p WHERE p.itemStrtus='True' AND p.productID like :PID";
+		String hql = "FROM ProductBean AS p WHERE p.itemStatus='True' AND p.productID like :PID";
 		ProductBean pb = (ProductBean) session.createQuery(hql).setParameter("PID", productID).getSingleResult();
 		return pb;
 	}
@@ -71,7 +71,7 @@ public class ShoppingCartDaoImpl implements ShoppingCartDao {
 		
 		List<ProductBean> queryProduct = new LinkedList<>();
 		Session session = factory.getCurrentSession();
-		String hql = "FROM ProductBean AS p WHERE p.itemStrtus='True' AND p.productName like :name";
+		String hql = "FROM ProductBean AS p WHERE p.itemStatus='True' AND p.productName like :name";
 		queryProduct = session.createQuery(hql).setParameter("name", "%"+productName+"%").getResultList();
 		
 		return queryProduct;

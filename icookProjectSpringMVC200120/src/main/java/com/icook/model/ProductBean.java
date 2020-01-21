@@ -25,7 +25,7 @@ public class ProductBean {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer productID;  //設定自動PK
 	private String productName;
-	private Boolean itemStrtus;
+	private Boolean itemStatus;
 	private String category;
 	private String productInfo;
 	private String image1;
@@ -40,12 +40,12 @@ public class ProductBean {
 		super();
 	}
 	
-	public ProductBean(Integer productID, String productName, Boolean itemStrtus, String category, String productInfo,
+	public ProductBean(Integer productID, String productName, Boolean itemStatus, String category, String productInfo,
 			String image1, Date updateTime, Set<ProductTypeBean> type) {
 		super();
 		this.productID = productID;
 		this.productName = productName;
-		this.itemStrtus = itemStrtus;
+		this.itemStatus = itemStatus;
 		this.category = category;
 		this.productInfo = productInfo;
 		this.image1 = image1;
@@ -76,12 +76,15 @@ public class ProductBean {
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-	public Boolean getItemStrtus() {
-		return itemStrtus;
+
+	public Boolean getItemStatus() {
+		return itemStatus;
 	}
-	public void setItemStrtus(Boolean itemStrtus) {
-		this.itemStrtus = itemStrtus;
+
+	public void setItemStatus(Boolean itemStatus) {
+		this.itemStatus = itemStatus;
 	}
+
 	public String getCategory() {
 		return category;
 	}
@@ -122,7 +125,7 @@ public class ProductBean {
 		}
 		
 		return "Product [productID=" + productID + ", productName=" + productName + 
-				", itemStrtus=" + itemStrtus + ", category=" + category + ", productInfo=" + productInfo + 
+				", itemStatus=" + itemStatus + ", category=" + category + ", productInfo=" + productInfo + 
 				", image1=" + image1 +", updateTime" + updateTime + sb + "]";
 		
 	}
