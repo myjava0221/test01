@@ -51,7 +51,7 @@
 			</form>
 		</fieldset>
 	</div>	
-	XlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlex
+	BXXXXXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlexXlex
 <!-- 	<p>1第一層迴圈forEach取productBean</p> -->
 <!-- 	<p>2 迴圈中用core的Set設定ProductBean的type資料(Set陣列)</p> -->
 <!-- 	<p>3用將此Set用toArray(new ProductTypeBean)轉成陣列後，放入List,放入sessionScope</p> -->
